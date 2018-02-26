@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ltb.emall.mapper.ProductMapper">
+  <resultMap id="BaseResultMap" type="com.ltb.emall.pojo.Product">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="initialPrice" jdbcType="REAL" property="initialPrice" />
+    <result column="promotePrice" jdbcType="REAL" property="promotePrice" />
+    <result column="inventory" jdbcType="INTEGER" property="inventory" />
+    <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="cid" jdbcType="INTEGER" property="cid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, name, title, initialPrice, promotePrice, inventory, createDate, cid
+  </sql>
+  <select id="selectByExample" parameterType="com.ltb.emall.pojo.ProductExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from product
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from product
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from product
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.ltb.emall.pojo.Product" useGeneratedKeys="true">
+    insert into product (name, title, initialPrice, 
+      promotePrice, inventory, createDate, 
+      cid)
+    values (#{name,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{initialPrice,jdbcType=REAL}, 
+      #{promotePrice,jdbcType=REAL}, #{inventory,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{cid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.ltb.emall.pojo.Product" useGeneratedKeys="true">
+    insert into product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        name,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="initialPrice != null">
+        initialPrice,
+      </if>
+      <if test="promotePrice != null">
+        promotePrice,
+      </if>
+      <if test="inventory != null">
+        inventory,
+      </if>
+      <if test="createDate != null">
+        createDate,
+      </if>
+      <if test="cid != null">
+        cid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="initialPrice != null">
+        #{initialPrice,jdbcType=REAL},
+      </if>
+      <if test="promotePrice != null">
+        #{promotePrice,jdbcType=REAL},
+      </if>
+      <if test="inventory != null">
+        #{inventory,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cid != null">
+        #{cid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ltb.emall.pojo.Product">
+    update product
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="initialPrice != null">
+        initialPrice = #{initialPrice,jdbcType=REAL},
+      </if>
+      <if test="promotePrice != null">
+        promotePrice = #{promotePrice,jdbcType=REAL},
+      </if>
+      <if test="inventory != null">
+        inventory = #{inventory,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null">
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cid != null">
+        cid = #{cid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ltb.emall.pojo.Product">
+    update product
+    set name = #{name,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      initialPrice = #{initialPrice,jdbcType=REAL},
+      promotePrice = #{promotePrice,jdbcType=REAL},
+      inventory = #{inventory,jdbcType=INTEGER},
+      createDate = #{createDate,jdbcType=TIMESTAMP},
+      cid = #{cid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,309 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+a {
+    color: #999999;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.blueColor {
+    color: #337ab7;
+}
+
+div.workingArea {
+    margin: 5px 370px;
+    width: 1200px;
+    /*margin-left: 200px;*/
+}
+
+div.addDiv {
+    width: 400px;
+    margin: 0px auto;
+}
+
+div.editDiv {
+    width: 400px;
+    margin: 0px auto;
+
+}
+
+table.addTable {
+    width: 100%;
+}
+
+table.editTable {
+    width: 100%;
+}
+
+table.editTable td {
+    padding: 5px;
+}
+
+table.addTable td {
+    padding: 5px;
+}
+
+div.pageDiv {
+    text-align: center;
+}
+
+div.listDataTableDiv {
+    min-height: 220px;
+}
+
+div.footer {
+    margin: 20px;
+}
+
+div.editPVDiv {
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+span.pvName {
+    display: inline-block;
+    width: 100px;
+    color: #555555;
+    font-size: 16px;
+    /* 	font-weight:bold; */
+    margin-left: 20px;
+
+}
+
+div.eachPV {
+    float: left;
+    margin: 5px;
+}
+
+span.pvValue {
+    display: inline-block;
+    width: 200px;
+    border: 1px solid lightgray;
+    padding: 0px;
+}
+
+span.pvValue input {
+    border-width: 0px;
+}
+
+div.addPictureDiv {
+    width: 400px;
+}
+
+td.addPictureTableTD {
+    padding: 10px 100px;
+    text-align: center;
+    vertical-align: top;
+}
+
+div.orderPageOrderItem {
+    width: 100%;
+    padding: 20px;
+}
+
+table.orderPageOrderItemTable td {
+    padding: 5px;
+}
+
+tr.orderPageOrderItemTR {
+    display: none;
+}
+
+ul.pagination a.current {
+    font-weight: bold;
+    color: black;
+}
+
+td {
+    font-size: 14px;
+}
+
+th {
+    font-size: 14px;
+}
+
+div.end {
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    font-size: 30px;
+    font-weight: bold;
+    bottom: 30px;
+    padding: 10px;
+    /*background: #999;*/
+    color: #999999;
+
+}
+
+div.top {
+    display: block;
+    width: 100%;
+    margin-left: 600px;
+    font-size: 30px;
+    font-weight: bold;
+    bottom: 30px;
+    padding: 10px;
+    /*background: #999;*/
+    /*color: #999999;*/
+}
+
+div.loginSmallDiv {
+    background-color: white;
+    position: absolute;
+    right: 180px;
+    top: 180px;
+    width: 400px;
+    height: 430px;
+    padding: 80px 25px 60px 25px;
+}
+
+div.loginErrorMessageDiv {
+    width: 88%;
+    position: absolute;
+    top: 20px;
+    display: none;
+}
+
+div.loginErrorMessageDiv div.alert {
+    padding: 5px !important;
+    /*margin-bottom: -10px;*/
+    /*position: relative;*/
+}
+
+div.login_acount_text {
+    /*color: #3C3C3C;*/
+    font-size: 16px;
+    font-weight: bold;
+}
+
+div.loginInput {
+    /*border: 1px solid #CBCBCB;*/
+    margin: 30px 0px;
+}
+
+div.loginInput input {
+    display: inline-block;
+    border: 1px solid #DEDEDE;
+    width: 305px;
+    height: 39px;
+    position: relative;
+    /*left: 6px;*/
+    top: 3px;
+    outline: none;
+    font-size: 1.3em;
+}
+
+div.loginInput span, div.loginInput input {
+    display: inline-block;
+}
+
+div.loginInput span.loginInputIcon {
+    margin: 0px;
+    background-color: #CBCBCB;
+    width: 40px;
+    height: 40px;
+}
+
+span.loginInputIcon span.glyphicon {
+    font-size: 22px;
+    position: relative;
+    left: 9px;
+    top: 9px;
+    color: #606060;
+}
+
+div.registerDiv {
+    /*margin: 10px 20px;*/
+    text-align: center;
+    background-color: #204d74;
+    height: 880px;
+}
+
+table.registerTable {
+    background-color: white;
+    color: #3C3C3C;
+    font-size: 16px;
+    table-layout: fixed;
+    /*margin-top: 150px;*/
+}
+
+table.registerTable td {
+    /* 	border:1px dotted skyblue !important; */
+    padding: 25px 3px;
+    font-size: 18px;
+}
+
+td.registerTableLeftTD {
+    /*width: 300px;*/
+    text-align: right;
+}
+
+td.registerTableRightTD {
+    /*width: 150px;*/
+    text-align: left;
+}
+
+td.registerTip {
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+table.registerTable input {
+    border: 1px solid #DEDEDE;
+    width: 230px;
+    height: 36px;
+    font-size: 14px;
+}
+
+td.registerButtonTD {
+    text-align: center;
+}
+
+table.registerTable button {
+    /*width: 170px;*/
+    /*height: 36px;*/
+    /*border-radius: 2px;*/
+    /*color: white;*/
+    /*background-color: #337ab7;*/
+    /*border-width: 0px;*/
+}
+
+div.registerSuccessDiv {
+    margin: 10px 20px;
+    background-color: #F3FDF6;
+    border: 1px solid #DEF3E6;
+    font-size: 16px;
+    padding: 20px 130px;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.reviewStasticsDiv {
+    margin-top: 20px;
+}
+
+div.registerErrorMessageDiv {
+    width: 90%;
+    margin: 0px auto;
+    visibility: hidden;
+    position: relative;
+    /*padding: 8px !important;*/
+}
+
+div.registerErrorMessageDiv .alert {
+    padding: 8px !important;
+    text-align: left;
+    top: 10px;
+    position: relative;
+    height: 32px;
+}
+
+
