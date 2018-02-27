@@ -7,6 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" isELIgnored="false" %>
+<script>
+    $(function () {
+        var left = window.innerWidth / 2 - 300;
+        $("div.top").css("margin-left", left);
+    });
+    $(function () {
+        var width = window.innerWidth;
+        $("div.workingArea").css("width", width - 100);
+    });
+</script>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="text-center top">
         <div class="navbar-brand" style="margin-top: -1px;">

@@ -31,7 +31,7 @@ nav.top {
 }
 
 nav.top div.top_middle {
-    max-width: 54%;
+    max-width:61%;
     margin: 0px auto;
     font-size: 16px;
     font-weight: bolder;
@@ -471,7 +471,7 @@ div.loginDivInProductPage {
 div.loginSmallDiv {
     background-color: white;
     position: absolute;
-    right: 180px;
+    /*right: 180px;*/
     top: 180px;
     width: 400px;
     height: 430px;

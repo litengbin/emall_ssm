@@ -27,7 +27,7 @@
             $("div.loginErrorMessageDiv").hide();
         });
 
-        var left = window.innerWidth / 2 - window.innerWidth / 9;
+        var left = window.innerWidth / 2 - 200;
         $("div.loginSmallDiv").css("left", left);
     })
 </script>
