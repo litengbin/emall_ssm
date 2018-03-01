@@ -75,7 +75,7 @@ nav.top div.row div {
 
 div.searchDiv {
     /*background-color: #337ab7;*/
-    width: 400px;
+    width: 430px;
     margin: 50px auto;
     padding: 1px;
     height: 40px;
@@ -241,11 +241,11 @@ div.searchBelow span {
 
 div.searchBelow {
     margin-top: 3px;
-    margin-left: -20px;
+    margin-left: -5px;
 }
 
 div.searchBelow a {
-    padding: 0px 10px 0px 20px;
+    padding: 0px 10px 0px 10px;
     font-size: 14px;
 }
 
@@ -2204,6 +2204,11 @@ div.registerSuccessDiv {
 div.categoryPageDiv {
     max-width: 1013px;
     margin: 10px auto;
+}
+
+div.categoryPageDiv img{
+    width: 1050px;
+    height: 100px;
 }
 
 div.searchResultDiv {
