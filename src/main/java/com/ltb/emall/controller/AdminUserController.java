@@ -41,6 +41,16 @@ public class AdminUserController {
 
     @RequestMapping("adminregisterPage")
     public String admin_register() {
+        /**
+         * @author litengbin
+         * @method admin_register
+         * @param       []
+         * @return java.lang.String
+         * @date 2018/3/7 21:46
+         * @version 1.0.0
+         * @description 管理员注册页面
+         */
+
         return "admin/register";
     }
 
@@ -97,6 +107,15 @@ public class AdminUserController {
 
     @RequestMapping("admin_register")
     public String register(Model model, AdminUser adminUser) {
+        /**
+         * @author litengbin
+         * @method register
+         * @param       [model, adminUser]
+         * @return java.lang.String
+         * @date 2018/3/7 21:46
+         * @version 1.0.0
+         * @description 管理员注册
+         */
         String name = adminUser.getName();
         name = HtmlUtils.htmlEscape(name);
         adminUser.setName(name);
