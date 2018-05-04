@@ -39,7 +39,7 @@
                     mobileCount:true,
                     mobile:true,
                 },
-                userMessage:{
+                userManager:{
 //                    required:false;
                     maxlength:200,
                 }
@@ -61,7 +61,7 @@
                         required:"手机号码不能为空",
                         digits:"必须为数字",
                     },
-                    userMessage:{
+                    userManager:{
                         maxlength:"最大输入长度为200",
                     }
                 },
@@ -177,7 +177,7 @@
                     <img class="leaveMessageImg" src="img/site/leaveMessage.png">
                 </span>
                     <span class="leaveMessageTextareaSpan ">
-                    <textarea name="userMessage" class="leaveMessageTextarea form-control"></textarea>
+                    <textarea name="userManager" class="leaveMessageTextarea form-control"></textarea>
                     <div>
                         <span>还可以输入200个字符</span>
                     </div>
