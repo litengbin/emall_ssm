@@ -24,7 +24,7 @@ public class AdminLoginInterceptor extends HandlerInterceptorAdapter {
         HttpSession session = request.getSession();
         String contextPath = session.getServletContext().getContextPath();
         String[] noNeedAuthPage = new String[]{
-                "order_delivery", "home", "register"
+                "order_delivery", "home", "register","productImage_addtest"
         };
         String uri = request.getRequestURI();
         uri = StringUtils.remove(uri, contextPath);

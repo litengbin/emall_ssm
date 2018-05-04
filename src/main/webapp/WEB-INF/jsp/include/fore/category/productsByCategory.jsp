@@ -25,16 +25,18 @@
                     </a>
                     <span class="productPrice">¥<fmt:formatNumber type="number" value="${p.promotePrice}"
                                                                   minFractionDigits="2"/></span>
-                    <a class="productLink" href="foreproduct?pid=${p.id}">
+                    <strong>
+                    <a class="productLink text-muted" href="foreproduct?pid=${p.id}">
                             ${fn:substring(p.name, 0, 50)}
                     </a>
                     <a class="emallLink" href="foreproduct?pid=${p.id}">查看产品</a>
                     <div class="show1 productInfo">
                         <span class="monthDeal pull-left">月成交 <span
                                 class="productDealNumber">${p.saleCount}笔</span></span>
-                        <span class="productReview pull-right">评价<span
+                        <span class="productReview pull-right">评价&nbsp;<span
                                 class="productReviewNumber">${p.reviewCount}</span></span>
                     </div>
+                    </strong>
                 </div>
             </div>
         </c:if>

@@ -43,13 +43,15 @@
             $(".registerErrorMessageDiv").css("visibility", "hidden");
             ;
         });
+        var left = window.innerWidth / 2 - 200;
+        $("div.registerDiv1").css("left", left);
     })
 </script>
 
 <form method="post" action="foreregister" class="registerForm">
 
     <div class="registerDiv">
-        <div style="background-color: white;width: 400px;height:550px;margin:0 auto;top: 150px;position: relative">
+        <div class="registerDiv1" style="background-color: white;width: 400px;height:430px;top: 129px;position: relative">
             <div class="registerErrorMessageDiv">
                 <div class="alert alert-info" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
@@ -58,24 +60,24 @@
             </div>
             <table class="registerTable" align="center">
                 <tr>
-                    <td colspan="2" class="registerTip text-primary text-center">账户注册</td>
+                    <td colspan="2" class="registerTip text-primary text-center" style="margin-top: 5px;">账户注册</td>
                 </tr>
                 <tr>
-                    <td class="registerTableLeftTD text-muted">登陆名</td>
+                    <td class="registerTableLeftTD text-muted"><strong style="margin-right: 20px;">登陆名</strong></td>
                     <td class="registerTableRightTD"><input id="name" name="name" placeholder="会员名一旦设置成功，无法修改"
                                                             class="form-control"></td>
                 </tr>
                 <tr>
                     <td class="registerTip registerTableLeftTD text-muted">设置登陆密码</td>
-                    <td class="registerTableRightTD text-muted">登陆时验证，保护账号信息</td>
+                    <td class="registerTableRightTD text-muted"><strong style="margin-right: 5px;"> 登陆时验证，保护账号信息</strong></td>
                 </tr>
                 <tr>
-                    <td class="registerTableLeftTD text-muted">登陆密码</td>
+                    <td class="registerTableLeftTD text-muted"><strong style="margin-right: 20px;">登陆密码</strong></td>
                     <td class="registerTableRightTD"><input id="password" name="password" type="password"
                                                             placeholder="设置你的登陆密码" class="form-control"></td>
                 </tr>
                 <tr>
-                    <td class="registerTableLeftTD text-muted">密码确认</td>
+                    <td class="registerTableLeftTD text-muted"><strong style="margin-right: 20px;">密码确认</strong></td>
                     <td class="registerTableRightTD"><input id="repeatpassword" type="password" placeholder="请再次输入你的密码"
                                                             class="form-control">
                     </td>

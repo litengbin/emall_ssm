@@ -26,8 +26,8 @@
                             <a href="foreproduct?pid=${p.id}"><img width="100px"
                                                                    src="img/productSingle_middle/${p.firstProductImage.id}.jpg"></a>
                             <a class="productItemDescLink" href="foreproduct?pid=${p.id}">
-                                <span class="productItemDesc">[热销]
-                                ${fn:substring(p.name, 0, 20)}
+                                <span class="productItemDesc"><strong style="color: red">[热销]</strong>
+                                    <strong class="text-muted">${fn:substring(p.name, 0, 20)}</strong>
                                 </span>
                             </a>
                             <span class="productPrice">

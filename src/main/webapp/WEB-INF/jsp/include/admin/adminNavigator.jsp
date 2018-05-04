@@ -19,11 +19,10 @@
 </script>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="text-center top">
-        <div class="navbar-brand" style="margin-top: -1px;">
+        <a class="navbar-brand" style="margin-top: -1px;" href="admin_order_list">
             <span class="glyphicon glyphicon-home blueColor"></span>
-            首页
-            <%--<span style="color: #999">Welcome</span>--%>
-        </div>
+          首页
+        </a>
         <c:if test="${!empty adminUser}">
             <a class="navbar-brand" href="adminloginPage">${adminUser.name}</a>
             <a class="navbar-brand" href="admin_logout">退出</a>

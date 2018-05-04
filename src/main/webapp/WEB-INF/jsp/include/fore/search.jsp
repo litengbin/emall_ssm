@@ -9,7 +9,7 @@
          pageEncoding="utf-8" isELIgnored="false" %>
 <form action="foresearch" method="post">
     <div class="searchDiv">
-        <input name="keyword" type="text" placeholder="测试产品1  测试产品2" class="form-control pull-left">
+        <input name="keyword" placeholder="${ps[0].name}  ${ps[1].name}" class="form-control pull-left">
         <button type="submit" class="btn btn-primary ">搜索</button>
         <div class="searchBelow" style="clear: both">
             <c:forEach items="${cs}" var="c" varStatus="st">

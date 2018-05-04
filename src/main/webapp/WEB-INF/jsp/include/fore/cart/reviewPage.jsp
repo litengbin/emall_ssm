@@ -71,7 +71,7 @@
     <c:if test="${param.showonly!=true}">
         <div class="makeReviewDiv">
             <form method="post" action="foredoreview">
-                <div class="makeReviewText text-muted">其他买家，需要你的建议哦！</div>
+                <div class="makeReviewText">其他买家，需要你的建议哦！</div>
                 <table class="makeReviewTable">
                     <tr>
                         <td class="makeReviewTableFirstTD text-muted">评价商品</td>
@@ -81,7 +81,7 @@
                 <div class="makeReviewButtonDiv">
                     <input type="hidden" name="oid" value="${o.id}">
                     <input type="hidden" name="pid" value="${p.id}">
-                    <button type="submit" class="btn btn-primary">提交评价</button>
+                    <button type="submit" class="btn btn-primary btn-lg">提交评价</button>
                 </div>
             </form>
         </div>

@@ -80,17 +80,18 @@
         <div><a orderStatus="waitDelivery" href="#nowhere">待发货</a></div>
         <div><a orderStatus="waitConfirm" href="#nowhere">待收货</a></div>
         <div><a orderStatus="waitReview" href="#nowhere" class="noRightborder">待评价</a></div>
+        <div><a orderStatus="finish" href="#nowhere">已完成</a></div>
         <div class="orderTypeLastOne"><a class="noRightborder"> </a></div>
     </div>
     <div style="clear:both"></div>
     <div class="orderListTitle">
         <table class="orderListTitleTable">
             <tr>
-                <td class="text-muted">宝贝</td>
-                <td width="100px" class="text-muted">单价</td>
-                <td width="100px" class="text-muted">数量</td>
-                <td width="120px" class="text-muted">实付款</td>
-                <td width="100px" class="text-muted">交易操作</td>
+                <td class="text-muted" style="font-weight: bold"><h4 style="font-size:25px;"><span class="label label-primary">你的宝贝</span> </h4></td>
+                <td width="100px" class="text-muted" style="font-weight: bold"><h4 style="font-size:25px;"><span class="label label-primary">商品单价</span> </h4></td>
+                <td width="100px" class="text-muted" style="font-weight: bold"><h4 style="font-size:25px;"><span class="label label-primary">购买数量</span> </h4></td>
+                <td width="100px" class="text-muted" style="font-weight: bold"><h4 style="font-size:25px;"><span class="label label-primary">实际付款</span> </h4></td>
+                <td width="100px" class="text-muted" style="font-weight: bold"><h4 style="font-size:25px;"><span class="label label-primary">交易操作</span> </h4></td>
             </tr>
         </table>
     </div>
@@ -170,7 +171,7 @@
                                     <span class="text-primary" style="font-weight: bolder">待发货</span>
                                     <br/>
                                     <br/>
-                                    <button class="btn btn-primary btn-sm ask2delivery orderListItemConfirm"
+                                    <button class="btn btn-info btn-sm ask2delivery orderListItemConfirm"
                                             link="admin_order_delivery?id=${o.id}">催卖家发货
                                     </button>
                                 </c:if>
@@ -180,7 +181,8 @@
                                     </a>
                                 </c:if>
                                 <c:if test="${o.status=='finish' }">
-                                    <a href="forereview?oid=${o.id}">
+                                    <%--<a href="forereview?oid=${o.id}">--%>
+                                    <a href="javascript:void(0);">
                                         <button class="orderListItemReview btn btn-primary disabled">已完成</button>
                                     </a>
                                 </c:if>
@@ -188,6 +190,7 @@
                         </c:if>
                     </tr>
                 </c:forEach>
+
             </table>
         </c:forEach>
     </div>

@@ -10,9 +10,9 @@
 <div class="categoryMenu">
     <c:forEach items="${cs}" var="c">
         <div cid="${c.id}" class="eachCategory">
-            <span class="glyphicon glyphicon-link blueColor"></span>
+            <span class="glyphicon glyphicon-cutlery blueColor"></span>
             <a href="forecategory?cid=${c.id}">
-                    ${c.name}
+                    <strong>${c.name}</strong>
             </a>
         </div>
     </c:forEach>

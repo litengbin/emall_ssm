@@ -7,7 +7,7 @@ body {
     font-family: Arial;
     min-width: 1024px;
     /*background-color: #204d74;*/
-    /* 	width:1920px; */
+     	/*width:1920px;*/
     padding-bottom: 63px;
     padding-top:50px;
 }
@@ -29,11 +29,33 @@ nav.top {
     border-bottom-width: 1px;
     /*border-bottom-color: #e7e7e7;*/
 }
+#validateForm label{
+    vertical-align: top;
+    padding: 8px;
+    margin-top: 2px;
+}
+
+#validateForm .redStar{
+    font-weight: bolder;
+    font-size: larger;
+}
+#validateForm .form-control{
+   display: inline;
+    width:530px;
+    height:45px;
+}
+#validateForm label.error{
+    color:red;
+    font-weight: bold;
+}
+.green1{
+    color:green;
+}
 
 nav.top div.top_middle {
-    max-width:61%;
+    /*max-width:55%;*/
     margin: 0px auto;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bolder;
 }
 
@@ -46,7 +68,7 @@ nav.top div.top_middle {
 }
 
 nav.top span {
-    margin-right: 20px;
+    /*margin-right: 20px;*/
     /*color: #337ab7;*/
 }
 
@@ -63,6 +85,10 @@ nav.top {
     background-color: white;
 }
 
+.dropdown-menu {
+    min-width: 130px;
+}
+
 nav.top div.row div {
     margin: 5px 0px;
 }
@@ -76,7 +102,8 @@ nav.top div.row div {
 div.searchDiv {
     /*background-color: #337ab7;*/
     width: 430px;
-    margin: 50px auto;
+    margin: 30px auto;
+    margin-bottom: 45px;
     padding: 1px;
     height: 40px;
     display: block;
@@ -110,7 +137,7 @@ div.categoryWithCarousel {
 
 div.carouselBackgroundDiv {
     width: 100%;
-    height: 510px;
+    height: 527px;
     background-color: #E8E8E8;
     position: absolute;
     top: 36px;
@@ -184,20 +211,33 @@ div.categoryWithCarousel div.rightMenu img {
 }
 
 div.categoryWithCarousel div.rightMenu span {
-    margin: 0px 20px 0px 20px;
+    margin: 0px 19px 0px 20px;
 }
 
 div.categoryWithCarousel div.rightMenu a {
     font-size: 16px;
     color: white;
 }
-
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #337ab7;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+    background-color: #337ab7;
+}
+.navbar-nav>li>.dropdown-menu {
+    margin-top: -1px;
+}
+.navbar-right .dropdown-menu {
+    left:-1px;
+}
 div.categoryWithCarousel div.head {
+    padding-top: 8px;
+    padding-bottom: 8px;
     width: 200px;
     background-color: #204d74;
-    height: 36px;
+    height: 53px;
     line-height: 36px;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
     color: white;
     margin-left: 20px;
@@ -291,7 +331,7 @@ span.categoryTitle {
 div.productItem {
     width: 189px;
     height: 285px;
-    border: 3px solid white;
+    border: 5px solid white;
     background-color: white;
     margin: 8px 4px;
     float: left;
@@ -304,7 +344,7 @@ a.productItemDescLink {
 }
 
 div.productItem:hover {
-    border: 1px solid #337ab7;
+    border: 1px solid white;
 }
 
 div.productItem span.productItemDesc {
@@ -341,10 +381,10 @@ div.end {
     display: block;
     width: 82px;
     margin: 0px auto;
-    font-size: 30px;
+    font-size: 17px;
     font-weight: bold;
-    bottom: 30px;
-    padding: 10px;
+    bottom: 21px;
+    padding: 17px;
     /*background: #999;*/
     color: #999999;
 }
@@ -479,7 +519,7 @@ div.loginSmallDiv {
 }
 
 div.loginErrorMessageDiv {
-    width: 88%;
+    width: 100%;
     position: absolute;
     top: 20px;
     display: none;
@@ -545,7 +585,7 @@ div.categorySortBar {
 }
 
 table.categorySortBarTable td {
-    border: 1px solid #CCCCCC;
+    /*border: 1px solid #CCCCCC;*/
     padding: 3px;
     height: 23px;
 }
@@ -556,26 +596,31 @@ table.categorySortBarTable {
 }
 
 table.categorySortBarTable td a {
-    color: #999;
+    /*color: #337ab7;*/
     /*font-size: 12px;*/
 }
 
 table.categorySortBarTable td a:hover {
-    color: #337ab7;
+    /*color: #337ab7;*/
+    /*color: #46b8da;*/
+}
+
+.spana:hover{
+    color:skyblue;
 }
 
 table.categorySortBarTable td.grayColumn {
-    background-color: #F1EDEC;
+    /*background-color: #F1EDEC;*/
 }
 
 table.categorySortBarTable td.priceMiddleColumn {
-    width: 10px;
+    /*width: 30px;*/
     vertical-align: middle;
-    color: #CCCCCC;
+    color: #337ab7;
 }
 
 table.categorySortTable td:hover {
-    background-color: #F1EDEC;
+    /*background-color: #F1EDEC;*/
 }
 
 table.categorySortBarTable span.glyphicon {
@@ -583,9 +628,9 @@ table.categorySortBarTable span.glyphicon {
 }
 
 table.categorySortBarTable input {
-    border-width: 0px;
+    /*border-width: 0px;*/
     /*height: 100%;*/
-    width: 70px;
+    width: 135px;
     font-size: 14px;
 }
 
@@ -605,7 +650,7 @@ div.productUnit {
 
 div.productUnit:hover {
     width: 225px;
-    border: 1px solid #337ab7;
+    border: 1px solid white;
     padding: 0px;
 }
 
@@ -642,19 +687,19 @@ div.productUnit span.productReview {
 
 div.productUnit a.productLink {
     margin: 10px 0px;
-    color: #333333;
+    /*color: #333333;*/
     font-size: 0.8em;
     display: block;
 }
 
 div.productUnit a.productLink:hover {
     text-decoration: none;
-    color: #337ab7;
+    /*color: #337ab7;*/
 }
 
 div.productUnit a.emallLink {
     margin: 10px 0px;
-    color: #337ab7;
+    /*color: #337ab7;*/
     font-size: 0.8em;
     display: block;
     text-decoration: none;
@@ -1085,7 +1130,7 @@ div.productReviewItem div.productReviewItemUserInfo {
 
 div.productReviewItemDate {
     margin: 15px 0px 0px 0px;
-    color: #CCCCCC;
+    color: #858585;
 }
 
 span.userInfoGrayPart {
@@ -1168,9 +1213,10 @@ table.addressTable {
 }
 
 table.addressTable td.firstColumn {
-    width: 100px;
+    width: 110px;
     text-align: right;
     vertical-align: middle;
+    font-weight: bold;
 }
 
 table.addressTable td {
@@ -1195,7 +1241,7 @@ table.addressTable td input {
 
 table.addressTable td textarea {
     border: 1px solid #AFAFAF;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     /*width: 400px;*/
 }
 
@@ -1395,13 +1441,14 @@ div.aliPayPageDiv {
 
 span.confirmMoneyText {
     color: #4D4D4D;
+    font-size: larger;
 }
 
 span.confirmMoney {
     display: block;
     color: #FF6600;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     margin: 10px;
 }
 
@@ -1449,12 +1496,15 @@ div.payedAddressInfo li {
     color: #333333;
     padding-left: 15px;
     padding-top: 5px;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 span.payedInfoPrice {
-    color: #B10000;
+    /*color: #B10000;*/
+    color: red;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 25px;
     font-family: arial;
 }
 
@@ -1499,11 +1549,11 @@ span.cartTitlePrice {
 }
 
 div.cartTitle button {
-    background-color: #AAAAAA;
-    border: 1px solid #AAAAAA;
+    /*background-color: #AAAAAA;*/
+    /*border: 1px solid #AAAAAA;*/
     color: white;
     width: 53px;
-    height: 25px;
+    /*height: 25px;*/
     border-radius: 2px;
 }
 
@@ -1516,6 +1566,7 @@ table.cartProductTable th {
     font-weight: normal;
     color: #3C3C3C;
     padding: 20px 20px;
+    font-size: 20px;
 }
 
 img.cartProductImg {
@@ -1605,7 +1656,7 @@ img.cartProductItemIfSelected, img.selectAllItem {
 
 div.cartFoot {
     background-color: #E5E5E5;
-    line-height: 50px;
+    line-height: 52px;
     margin: 20px 0px;
     color: black;
     padding-left: 20px;
@@ -1624,12 +1675,14 @@ span.cartSumPrice {
 }
 
 div.cartFoot button {
-    background-color: #AAAAAA;
-    border: 0px solid #AAAAAA;
+    /*background-color: #AAAAAA;*/
+    /*border: 0px solid #AAAAAA;*/
+    margin-top: -5px;
+    margin-left: 5px;
     color: white;
     width: 120px;
     height: 50px;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     /* 	border-radius: 2px; */
 }
@@ -1652,12 +1705,13 @@ table.orderListTitleTable {
     border: 1px solid #E8E8E8;
     width: 100%;
     margin: 20px 0px;
-    background-color: #F5F5F5;
+    /*background-color: #F5F5F5;*/
     text-align: center;
 }
 
 table.orderListTitleTable td {
-    padding: 12px 0px;
+    padding: 12px 5px;
+    /*margin:5px;*/
 }
 
 div.orderType a {
@@ -1979,14 +2033,17 @@ div.reviewProductInfoRightDiv {
 }
 
 div.reviewProductInfoImg {
-    border: 1px solid #E7E7E7;
+    /*border: 1px solid #E7E7E7;*/
     width: 464px;
     text-align: center;
     float: left;
 }
-
+.reviewProductInfoRightDiv td {
+    font-weight: bolder;
+    font-size: larger;
+}
 div.reviewProductInfoRightText {
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -2011,8 +2068,8 @@ table.reviewProductInfoTable td {
 }
 
 div.reviewProductInfoRightBelowDiv {
-    border: 1px solid #F6F5F3;
-    background-color: #FDFBFA;
+    /*border: 3px solid #F6F5F3;*/
+    /*background-color: #FDFBFA;*/
     height: 166px;
     padding: 16px 81px;
 }
@@ -2029,16 +2086,17 @@ span.reviewProductInfoRightBelowImg {
 }
 
 span.reviewProductInfoRightBelowText {
-    border: 1px solid #EFEFEF;
+    /*border: 1px solid #EFEFEF;*/
     /* 	border-left-width:1px;	 */
     display: inline-block;
     width: 400px;
     height: 42px;
-    padding: 10px;
+    padding: 11px;
     position: relative;
-    left: -4px;
-    top: -7px;
-    font-size: 16px;
+    left: -14px;
+    top: 20px;
+    font-size: 23px;
+    /*color: #337ab7;*/
 }
 
 div.reviewStasticsLeft {
@@ -2089,9 +2147,9 @@ div.reviewStasticsFoot {
 }
 
 div.makeReviewDiv {
-    border: 1px solid #D1CCC8;
-    margin: 20px 0px;
-    background-color: #EFEFEF;
+    /*border: 1px solid #D1CCC8;*/
+    margin: 42px 0px;
+    /*background-color: #EFEFEF;*/
 }
 
 div.makeReviewText {
@@ -2105,7 +2163,7 @@ table.makeReviewTable {
 }
 
 table.makeReviewTable td {
-    border: 1px solid #E7E7E7;
+    /*border: 1px solid #E7E7E7;*/
     padding: 10px;
     background-color: white;
 }
@@ -2119,6 +2177,8 @@ table.makeReviewTable textarea {
 
 td.makeReviewTableFirstTD {
     background-color: #F6F6F6;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 div.makeReviewButtonDiv {
@@ -2128,18 +2188,18 @@ div.makeReviewButtonDiv {
 }
 
 div.makeReviewButtonDiv button {
-    width: 82px;
-    height: 30px;
+    /*width: 82px;*/
+    /*height: 30px;*/
     border-radius: 2px;
     border-width: 0px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 div.registerDiv {
     /*margin: 10px 20px;*/
     text-align: center;
     background-color: #204d74;
-    height: 98%;
+    height: 100%;
 }
 
 table.registerTable {
@@ -2147,12 +2207,12 @@ table.registerTable {
     color: #3C3C3C;
     font-size: 16px;
     table-layout: fixed;
-    /*margin-top: 150px;*/
+    margin-top: -10px;
 }
 
 table.registerTable td {
     /* 	border:1px dotted skyblue !important; */
-    padding: 25px 3px;
+    padding: 15px 3px;
     font-size: 18px;
 }
 

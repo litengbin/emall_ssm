@@ -59,9 +59,11 @@ public class ForeController {
          * @description 主页
          */
         List<Category> cs = categoryService.list();
+        List<Product> ps = productService.list(cs.get(cs.size() - 1).getId());
         productService.fill(cs);
         productService.fillByRow(cs);
         model.addAttribute("cs", cs);
+        model.addAttribute("ps", ps);
         return "fore/home";
     }
 

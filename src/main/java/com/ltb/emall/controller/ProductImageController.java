@@ -10,11 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpSession;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.List;
@@ -78,9 +76,9 @@ public class ProductImageController {
         return "redirect:admin_productImage_list?pid=" + pi.getPid();
     }
 
-//    @RequestMapping("admin_productImage_addtest")
-//    public String addtest(HttpSession session) {
-//        String picPath = "C:/Users/Administrator/Desktop/1.jpg";
+    @RequestMapping("admin_productImage_addtest")
+    public String addtest(HttpSession session) {
+        String picPath = "C:/Users/Administrator/Desktop/1.jpg";
 //        String imageFolder;
 //        String imageFolder_small = null;
 //        String imageFolder_middle = null;
@@ -122,8 +120,18 @@ public class ProductImageController {
 //                }
 //            }
 //        }
-//        return "redirect:forehome";
-//    }
+        File f = new File("C:/Users/Administrator/Desktop", "2.jpg");
+        try {
+            BufferedImage image = ImageIO.read(new File(picPath));
+            ImageIO.write(image, "jpg", f);
+            BufferedImage img = ImageUtil.change2jpg(f);
+            ImageIO.write(img, "jpg", f);
+            ImageUtil.resizeImage(f, 500, 900, new File("C:/Users/Administrator/Desktop", "3.jpg"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "redirect:forehome";
+    }
 
     @RequestMapping("admin_productImage_delete")
     public String delete(int id, HttpSession session) {

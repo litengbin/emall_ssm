@@ -7,8 +7,74 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="utf-8" isELIgnored="false" %>
+<script>
+    $(function () {
+        $.validator.addMethod("post",function (value,element) {
+            return this.optional(element) || /^\w{6}$/.test(value);
+        },"该邮编不正确，正确邮编为6位");
+        $.validator.addMethod("mobileCount",function(value,element){
+            return this.optional(element) || /^\w{11}$/.test(value);
+        },"该手机号码不正确，正确手机位数为11位");
+        $.validator.addMethod("mobile",function(value,element){
+            return this.optional(element) || /^1[34578]{1}\d{9}$/.test(value);
+        },"该手机号码不正确，请输入正确的手机号码");
+        $("#validateForm").validate({
+            rules:{
+                address:{
+                    required:true,
+                },
+                post:{
+                    required:true,
+                    digits:true,
+                     post:true,
+                },
+                receiver:{
+                    required:true,
+                    maxlength:25,
+                    minlength:2,
+                },
+                mobile:{
+                    required:true,
+                    digits:true,
+                    mobileCount:true,
+                    mobile:true,
+                },
+                userMessage:{
+//                    required:false;
+                    maxlength:200,
+                }
+            },
+                messages:{
+                    address:{
+                        required:"地址不能为空",
+                    },
+                    post:{
+                        required:"邮编不能为空",
+                        digits:"必须为数字",
+                    },
+                    receiver:{
+                        required:"收货人不能为空",
+                        maxlength:"最大输入长度为25",
+                        minlength:"最小输入长度为2",
+                    },
+                    mobile:{
+                        required:"手机号码不能为空",
+                        digits:"必须为数字",
+                    },
+                    userMessage:{
+                        maxlength:"最大输入长度为200",
+                    }
+                },
+                    elementError:"label",
+                    success:function (label) {
+                        label.html("<span class = 'green1 glyphicon glyphicon-ok'>正确</span>");
+                    },
+//                    errorClass:"error glyphicon glyphicon-remove",
+        });
+    });
+</script>
 <div class="buyPageDiv">
-    <form action="forecreateOrder" method="post">
+    <form id = "validateForm" action="forecreateOrder" method="post">
         <div class="buyFlow">
             <div class="progress" style="margin: 60px auto;">
                 <div class="progress-bar progress-bar-striped active" style="width: 20%">
@@ -31,7 +97,7 @@
                                       class="form-control"></textarea></td>
                     </tr>
                     <tr>
-                        <td class="firstColumn">邮政编码</td>
+                        <td class="firstColumn">邮政编码<span class="redStar">*</span></td>
                         <td><input name="post" placeholder="如果您不清楚邮递区号，请填写000000" type="text" class="form-control"></td>
                     </tr>
                     <tr>
@@ -53,10 +119,10 @@
                 <tr>
                     <th colspan="2" class="productListTableFirstColumn">
                     </th>
-                    <th>单价</th>
-                    <th>数量</th>
-                    <th>小计</th>
-                    <th>配送方式</th>
+                    <th><span class="label label-primary">商品单价</span></th>
+                    <th><span class="label label-primary">商品数量</span></th>
+                    <th><span class="label label-primary">商品总价</span></th>
+                    <th><span class="label label-primary">配送方式</span></th>
                 </tr>
                 <tr class="rowborder">
                     <td colspan="2"></td>
@@ -74,7 +140,7 @@
                         </td>
                         <td class="orderItemProductInfo">
                             <a href="foreproduct?pid=${oi.product.id}" class="orderItemProductLink">
-                                    ${oi.product.name}
+                                <strong>${oi.product.name}</strong>
                             </a>
                         </td>
                         <td>
@@ -85,14 +151,14 @@
                         <td>
                             <span class="orderItemProductNumber">${oi.number}</span>
                         </td>
-                        <td><span class="orderItemUnitSum">
+                        <td><span class="orderItemUnitSum"><strong style="font-size:larger">
                         ￥<fmt:formatNumber type="number" value="${oi.number*oi.product.promotePrice}"
-                                           minFractionDigits="2"/>
+                                           minFractionDigits="2"/></strong>
                         </span></td>
                         <c:if test="${st.count==1}">
                             <td rowspan="5" class="orderItemLastTD">
                                 <label class="orderItemDeliveryLabel">
-                                    <input type="radio" value="" checked="checked">
+                                    <input type="radio" value="" checked="checked"/>
                                     普通配送
                                 </label>
                                 <select class="orderItemDeliverySelect" class="form-control">
@@ -110,7 +176,7 @@
                     <span>
                     <img class="leaveMessageImg" src="img/site/leaveMessage.png">
                 </span>
-                    <span class="leaveMessageTextareaSpan">
+                    <span class="leaveMessageTextareaSpan ">
                     <textarea name="userMessage" class="leaveMessageTextarea form-control"></textarea>
                     <div>
                         <span>还可以输入200个字符</span>

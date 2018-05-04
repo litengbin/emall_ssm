@@ -50,6 +50,12 @@
             hideProductsAsideCategorys(cid);
         });
 
+        $(".dropdown-menu li").mouseenter(function () {
+            $(this).css("background-color","#dedede");
+        }).mouseleave(function(){
+            $(this).css("background-color","white");
+        });
+
         $("div.rightMenu span").mouseenter(function () {
             var left = $(this).position().left;
             var top = $(this).position().top;
@@ -62,6 +68,9 @@
         $("div.rightMenu span").mouseleave(function () {
             $("img#catear").hide();
         });
+        $('.carousel').carousel({
+            interval: 3000
+        })
         var left = $("div#carousel-of-product").offset().left;
         $("div.categoryMenu").css("left", left - 20);
         $("div.categoryWithCarousel div.head").css("margin-left", left);
@@ -69,24 +78,37 @@
     });
 </script>
 <%--<img src="img/site/catear.png" id="catear" class="catear"/>--%>
+
 <div class="categoryWithCarousel">
     <div class="headbar show1">
         <div class="head ">
-            <span style="margin-left:10px" class="glyphicon glyphicon-th-list"></span>
-            <span style="margin-left:10px">商品分类</span>
+            <span style="margin:5px 0px 0px 10px;" class="glyphicon glyphicon-star"></span>
+            <span style="margin-left:-2px;"><strong>商品分类</strong></span>
         </div>
-        <div class="rightMenu">
+        <div class="rightMenu" style="margin-left:5px;">
             <c:forEach items="${cs}" var="c" varStatus="st">
                 <c:if test="${st.count<=6}">
                 <span>
                 <a href="forecategory?cid=${c.id}">
-                        ${c.name}
+                 <strong>${c.name}</strong>
                 </a></span>
                 </c:if>
+                <c:if test="${st.count >6}">
+                    <c:if test="${st.count == 7}">
+                        <ul class="nav navbar-nav navbar-right" style="margin-top: -15px;">
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>更多分类</strong><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                    </c:if>
+                    <li style="padding: 5px;"><span>
+                    <a href="forecategory?cid=${c.id}"><strong style="color: #337ab7;">${c.name}</strong></a></span></li>
+                    <c:if test="${st.end}"></ul></li>
+                        </ul></c:if>
+                    </c:if>
             </c:forEach>
         </div>
     </div>
-    <div style="position: relative">
+        <div style="position: relative">
         <%@include file="categoryMenu.jsp" %>
     </div>
     <div style="position: relative;left: 0;top: 0;">

@@ -42,25 +42,25 @@
 <div class="categorySortBar">
     <table class="categorySortBarTable categorySortTable">
         <tr>
-            <td
+        <td
                     <c:if test="${'all'==param.sort||empty param.sort}">class="grayColumn"</c:if> ><a
-                    href="?cid=${c.id}&sort=all">综合<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+                    href="?cid=${c.id}&sort=all"><h3><span class="label label-primary spana "><strong>综合 </strong><span class="glyphicon glyphicon-arrow-down " ></span></span></h3></a></td>
             <td
-                    <c:if test="${'review'==param.sort}">class="grayColumn"</c:if> ><a href="?cid=${c.id}&sort=review">人气<span
-                    class="glyphicon glyphicon-arrow-down"></span></a></td>
-            <td <c:if test="${'date'==param.sort}">class="grayColumn"</c:if>><a href="?cid=${c.id}&sort=date">新品<span
-                    class="glyphicon glyphicon-arrow-down"></span></a></td>
-            <td <c:if test="${'saleCount'==param.sort}">class="grayColumn"</c:if>><a href="?cid=${c.id}&sort=saleCount">销量<span
-                    class="glyphicon glyphicon-arrow-down"></span></a></td>
-            <td <c:if test="${'price'==param.sort}">class="grayColumn"</c:if>><a href="?cid=${c.id}&sort=price">价格<span
-                    class="glyphicon glyphicon-resize-vertical"></span></a></td>
+                    <c:if test="${'review'==param.sort}">class="grayColumn"</c:if> ><a href="?cid=${c.id}&sort=review"><h3><span class="label label-primary spana"><strong>人气</strong><span
+                    class="glyphicon glyphicon-arrow-down"></span></span></h3></a></td>
+            <td <c:if test="${'date'==param.sort}">class="grayColumn"</c:if>><a href="?cid=${c.id}&sort=date"><h3><span class="label label-primary spana"><strong>新品</strong><span
+                    class="glyphicon glyphicon-arrow-down"></span></span></h3></a></td>
+            <td <c:if test="${'saleCount'==param.sort}">class="grayColumn"</c:if>><a href="?cid=${c.id}&sort=saleCount"><h3><span class="label label-primary spana"><strong>销量</strong><span
+                    class="glyphicon glyphicon-arrow-down"></span></span></h3></a></td>
+            <td <c:if test="${'price'==param.sort}">class="grayColumn"</c:if>><a href="?cid=${c.id}&sort=price"><h3><span class="label label-primary spana"><strong>价格</strong><span
+                    class="glyphicon glyphicon-resize-vertical"></span></span></h3></a></td>
         </tr>
     </table>
     <table class="categorySortBarTable">
         <tr>
-            <td><input class="sortBarPrice beginPrice form-control" type="text" placeholder="请输入"></td>
-            <td class="grayColumn priceMiddleColumn">-</td>
-            <td><input class="sortBarPrice endPrice form-control" type="text" placeholder="请输入"></td>
+            <td><input class="sortBarPrice beginPrice form-control" type="text" placeholder="请输入最低价格"></td>
+            <td class="grayColumn priceMiddleColumn">---</td>
+            <td><input class="sortBarPrice endPrice form-control" type="text" placeholder="请输入最高价格"></td>
         </tr>
     </table>
 </div>

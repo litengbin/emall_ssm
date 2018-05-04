@@ -73,7 +73,7 @@ public class AdminUserController {
             return "admin/login";
         }
         session.setAttribute("adminUser", adminUser);
-        return "redirect:admin_category_list";
+        return "redirect:admin_order_list";
     }
 
     @RequestMapping("admin_logout")

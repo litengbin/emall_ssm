@@ -32,6 +32,7 @@
                     function (result) {
                         if ("success" == result) {
                             $("tr.cartProductItemTR[oiid=" + deleteOrderItemid + "]").hide();
+                            location.href = "forecart";
                         }
                         else {
                             location.href = "loginPage";
@@ -147,12 +148,14 @@
         });
 
         if (selectAny) {
-            $("button.createOrderButton").css("background-color", "#337ab7");
-            $("button.createOrderButton").removeAttr("disabled");
+//            $("button.createOrderButton").css("background-color", "#337ab7");
+            $("button.createOrderButton").addClass("btn btn-primary");
+            $("button.createOrderButton").removeAttr("disabled").removeClass("disabled");
+
         }
         else {
-            $("button.createOrderButton").css("background-color", "#AAAAAA");
-            $("button.createOrderButton").attr("disabled", "disabled");
+//            $("button.createOrderButton").css("background-color", "#AAAAAA");
+            $("button.createOrderButton").attr("disabled", "disabled").addClass("disabled");
         }
 
     }
@@ -226,22 +229,22 @@
     <div class="cartTitle pull-right">
         <span>已选商品  (不含运费)</span>
         <span class="cartTitlePrice">￥0.00</span>
-        <button class="createOrderButton" disabled="disabled">结 算</button>
+        <button class="createOrderButton btn btn-primary disabled" disabled="disabled">结 算</button>
     </div>
 
     <div class="cartProductList">
         <table class="cartProductTable">
             <thead>
             <tr>
-                <th class="selectAndImage">
+                <th class="selectAndImage"> <span class="label label-primary">
                     <img selectit="false" class="selectAllItem" src="img/site/cartNotSelected.png">
-                    全选
+                   全选</span>
                 </th>
-                <th>商品信息</th>
-                <th>单价</th>
-                <th>数量</th>
-                <th width="120px">金额</th>
-                <th class="operation">操作</th>
+                <th><span class="label label-primary">商品信息</span> </th>
+                <th><span class="label label-primary">单价</span></th>
+                <th><span class="label label-primary">数量</span></th>
+                <th width="120px"><span class="label label-primary">金额</span></th>
+                <th class="operation"><span class="label label-primary">操作</span></th>
             </tr>
             </thead>
             <tbody>
@@ -270,11 +273,11 @@
                             <span class="hidden orderItemStock " pid="${oi.product.id}">${oi.product.inventory}</span>
                             <span class="hidden orderItemPromotePrice "
                                   pid="${oi.product.id}">${oi.product.promotePrice}</span>
-                            <a pid="${oi.product.id}" class="numberMinus form-control" href="#nowhere">-</a>
-                            <input pid="${oi.product.id}" oiid="${oi.id}" class="orderItemNumberSetting form-control"
+                            <a pid="${oi.product.id}" class="numberMinus form-control" href="#nowhere" style="padding: 5px 2px;">-</a>
+                            <input pid="${oi.product.id}" oiid="${oi.id}" class="orderItemNumberSetting form-control" style="padding: 5px 2px;"
                                    autocomplete="off" value="${oi.number}">
                             <a stock="${oi.product.inventory}" pid="${oi.product.id}" class="numberPlus form-control"
-                               href="#nowhere" >+</a>
+                               href="#nowhere" style="padding: 5px 2px;">+</a>
                         </div>
 
                     </td>
@@ -285,7 +288,7 @@
                             </span>
                     </td>
                     <td>
-                        <a class="deleteOrderItem" oiid="${oi.id}" href="#nowhere">删除</a>
+                        <a class="deleteOrderItem btn btn-danger" oiid="${oi.id}" href="#nowhere">删除</a>
                     </td>
                 </tr>
             </c:forEach>
@@ -302,7 +305,7 @@
             <span>已选商品 <span class="cartSumNumber">0</span> 件</span>
             <span>合计 (不含运费): </span>
             <span class="cartSumPrice">￥0.00</span>
-            <button class="createOrderButton" disabled="disabled">结 算</button>
+            <button class="createOrderButton btn btn-primary disabled" disabled="disabled">结 算</button>
         </div>
     </div>
 </div>

@@ -29,9 +29,10 @@
 
         var left = window.innerWidth / 2 - 200;
         $("div.loginSmallDiv").css("left", left);
-    })
+
+    });
 </script>
-<div id="loginDiv" style="background-color: #204d74;height: 100%;margin-top: -12px;">
+<div id="loginDiv" style="background-color: #204d74;height:100%;margin-top: -12px;">
     <form class="loginForm" action="forelogin" method="post">
         <div id="loginSmallDiv" class="loginSmallDiv">
             <div class="loginErrorMessageDiv">
@@ -54,7 +55,7 @@
                 <input id="password" name="password" type="password" placeholder="密码" type="text" class="form-control">
             </div>
             <div>
-                <a class="notImplementLink" href="#nowhere">忘记登录密码</a>
+                <a class="notImplementLink" href="#nowhere" >忘记登录密码</a>
                 <a href="registerPage" class="pull-right">免费注册</a>
             </div>
             <div style="margin-top:30px">

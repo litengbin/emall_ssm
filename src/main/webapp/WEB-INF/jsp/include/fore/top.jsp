@@ -7,6 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" isELIgnored="false" %>
+<script>
+$(function(){
+
+    $(".top_middle").css("width", window.innerWidth/2 + 65);
+    }
+);
+</script>
+
 <nav class="top navbar navbar-default navbar-fixed-top">
     <div class="top_middle ">
         <a href="forehome">

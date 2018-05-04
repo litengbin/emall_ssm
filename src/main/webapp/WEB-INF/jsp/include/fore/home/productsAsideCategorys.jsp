@@ -26,7 +26,7 @@
                         <a href="foreproduct?pid=${p.id}">
                             <c:forEach items="${fn:split(p.title, ' ')}" var="title" varStatus="st">
                                 <c:if test="${st.index==0}">
-                                    ${title}
+                                    <strong>${title}</strong>
                                 </c:if>
                             </c:forEach>
                         </a>

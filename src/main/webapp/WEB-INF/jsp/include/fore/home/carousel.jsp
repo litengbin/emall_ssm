@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="utf-8" isELIgnored="false" %>
+
 <div id="carousel-of-product" class="carousel-of-product carousel slide1" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -19,15 +20,31 @@
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <img class="carousel carouselImage" src="img/lunbo/1.jpg">
+            <div class="carousel-caption">
+                <h3 class="text-primary">热门商品</h3>
+                <p class="text-info">折扣大减价</p>
+            </div>
         </div>
         <div class="item">
             <img class="carouselImage" src="img/lunbo/2.jpg">
+            <div class="carousel-caption">
+                <h3 class="text-primary">最新商品</h3>
+                <p class="text-info">折扣大减价</p>
+            </div>
         </div>
         <div class="item">
             <img class="carouselImage" src="img/lunbo/3.jpg">
+            <div class="carousel-caption">
+                <h3 class="text-primary">夏季商品</h3>
+                <p class="text-info">折扣大减价</p>
+            </div>
         </div>
         <div class="item">
             <img class="carouselImage" src="img/lunbo/4.jpg">
+            <div class="carousel-caption">
+                <h3 class="text-primary">最赞商品</h3>
+                <p class="text-info">折扣大减价</p>
+            </div>
         </div>
     </div>
     <!-- Controls -->
