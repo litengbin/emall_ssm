@@ -190,6 +190,7 @@ div.categoryWithCarousel div.eachCategory:hover {
 
 div.categoryWithCarousel div.eachCategory span {
     margin-right: 10px;
+    margin-left: 15px;
 }
 
 div.categoryWithCarousel div.eachCategory {
@@ -197,7 +198,7 @@ div.categoryWithCarousel div.eachCategory {
     line-height: 30px;
     padding-left: 10px;
     /* 	border:1px dashed lightgray; */
-    font-size: 14px;
+    font-size: 16px;
     /* 	background-image:url(../../img/site/eachcategory.png); */
     /* 	background-repeat: no-repeat; */
 }
@@ -211,7 +212,7 @@ div.categoryWithCarousel div.rightMenu img {
 }
 
 div.categoryWithCarousel div.rightMenu span {
-    margin: 0px 19px 0px 20px;
+    margin: 0px 26px 0px 20px;
 }
 
 div.categoryWithCarousel div.rightMenu a {

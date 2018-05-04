@@ -46,6 +46,13 @@
                 <p class="text-info">折扣大减价</p>
             </div>
         </div>
+        <div class="item">
+            <img class="carouselImage" src="img/lunbo/5.jpg">
+            <div class="carousel-caption">
+                <h3 class="text-primary">最赞商品</h3>
+                <p class="text-info">折扣大减价</p>
+            </div>
+        </div>
     </div>
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-of-product" role="button" data-slide="prev">

@@ -82,7 +82,7 @@
 <div class="categoryWithCarousel">
     <div class="headbar show1">
         <div class="head ">
-            <span style="margin:5px 0px 0px 10px;" class="glyphicon glyphicon-star"></span>
+            <span style="margin:5px 0px 0px 25px;" class="glyphicon glyphicon-star"></span>
             <span style="margin-left:-2px;"><strong>商品分类</strong></span>
         </div>
         <div class="rightMenu" style="margin-left:5px;">

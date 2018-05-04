@@ -200,7 +200,7 @@ public class ProductServiceImpl implements ProductService {
          * @version 1.0.0
          * @description 一行8个-填充分类
          */
-        int productNumberEachRow = 8;
+        int productNumberEachRow = 6;
         for (Category c : cs) {
             List<Product> products = c.getProducts();
             List<List<Product>> productsByRow = new ArrayList<>();

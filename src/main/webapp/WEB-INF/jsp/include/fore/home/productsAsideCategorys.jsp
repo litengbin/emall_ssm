@@ -22,11 +22,11 @@
         <c:forEach items="${c.productsByRow}" var="ps">
             <div class="row show1">
                 <c:forEach items="${ps}" var="p">
-                    <c:if test="${!empty p.title}">
+                    <c:if test="${!empty p.name}">
                         <a href="foreproduct?pid=${p.id}">
-                            <c:forEach items="${fn:split(p.title, ' ')}" var="title" varStatus="st">
+                            <c:forEach items="${fn:split(p.name, ' ')}" var="name" varStatus="st">
                                 <c:if test="${st.index==0}">
-                                    <strong>${title}</strong>
+                                    <strong>${name}</strong>
                                 </c:if>
                             </c:forEach>
                         </a>

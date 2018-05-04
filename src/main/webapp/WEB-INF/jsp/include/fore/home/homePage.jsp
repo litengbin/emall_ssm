@@ -14,7 +14,7 @@
          onmouseout="interval = setInterval('changePos()', delay)"
          align="right">
         <a href="#" target="_blank">
-            <img width="100px" height="100px;" src="img/lunbo/5.jpg"
+            <img width="100px" height="100px;" src="img/lunbo/6.jpg"
                  onclick="javascript:window.open(this.src);"
                  style="CURSOR: pointer" onload="return imgzoom(this,550)">
         </a>
