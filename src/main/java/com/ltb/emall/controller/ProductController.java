@@ -83,15 +83,6 @@ public class ProductController {
 
     @RequestMapping("admin_product_update")
     public String update(Product product) {
-        /**
-         * @author litengbin
-         * @method update
-         * @param       [product]
-         * @return java.lang.String
-         * @date 2018/2/18 14:44
-         * @version 1.0.0
-         * @description 修改产品
-         */
         productService.update(product);
         return "redirect:admin_product_list?cid=" + product.getCid();
     }

@@ -62,15 +62,6 @@ public class PropertyController {
 
     @RequestMapping("admin_property_edit")
     public String edit(Model model, int id) {
-        /**
-         * @author litengbin
-         * @method edit
-         * @param       [model, id]
-         * @return java.lang.String
-         * @date 2018/2/15 18:46
-         * @version 1.0.0
-         * @description 编辑属性
-         */
         Property p = propertyService.get(id);
         Category c = categoryService.get(p.getCid());
         p.setCategory(c);

@@ -32,15 +32,6 @@ public class OrderController {
 
     @RequestMapping("admin_order_list")
     public String list(Model model, Page page) {
-        /**
-         * @author litengbin
-         * @method list
-         * @param       [model, page]
-         * @return java.lang.String
-         * @date 2018/2/18 14:45
-         * @version 1.0.0
-         * @description 获取订单列表
-         */
         PageHelper.offsetPage(page.getStart(), page.getCount());
         List<Order> os = orderService.list();
         int total = (int) new PageInfo<>(os).getTotal();

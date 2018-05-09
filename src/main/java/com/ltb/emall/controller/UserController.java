@@ -27,15 +27,6 @@ public class UserController {
 
     @RequestMapping("admin_user_list")
     public String list(Model model, Page page) {
-        /**
-         * @author litengbin
-         * @method list
-         * @param       [model, page]
-         * @return java.lang.String
-         * @date 2018/2/18 14:42
-         * @version 1.0.0
-         * @description 获取用户列表
-         */
         PageHelper.offsetPage(page.getStart(), page.getCount());
         List<User> us = userService.list();
         int total = (int) new PageInfo<>(us).getTotal();

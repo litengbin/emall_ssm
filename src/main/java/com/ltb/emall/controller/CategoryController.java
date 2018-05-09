@@ -35,20 +35,9 @@ public class CategoryController {
 
     @RequestMapping("admin_category_list")
     public String list(Model model, Page page) {
-        /**
-         * @author litengbin
-         * @method list
-         * @param       [model, page]
-         * @return java.lang.String
-         * @date 2018/2/13 21:22
-         * @version 1.0.0
-         * @description 分类列表
-         */
         PageHelper.offsetPage(page.getStart(), page.getCount());
         List<Category> cs = categoryService.list();
         int total = (int) new PageInfo<>(cs).getTotal();
-        //List<Category> cs = categoryService.list(page);
-        //int total = categoryService.total();
         model.addAttribute("cs", cs);
         page.setTotal(total);
         model.addAttribute("page", page);
@@ -56,18 +45,12 @@ public class CategoryController {
     }
 
     @RequestMapping("admin_category_add")
-    public String add(Category c, HttpSession session, UploadedImageFile uploadedImageFile) throws IOException {
-        /**
-         * @author litengbin
-         * @method add
-         * @param       [c, session, uploadedImageFile]
-         * @return java.lang.String
-         * @date 2018/2/15 2:18
-         * @version 1.0.0
-         * @description 新增分类
-         */
+    public String add(Category c, HttpSession session,
+                      UploadedImageFile uploadedImageFile)
+            throws IOException {
         categoryService.add(c);
-        File imageFolder = new File(session.getServletContext().getRealPath("img/category"));
+        File imageFolder = new File(session.getServletContext()
+                .getRealPath("img/category"));
         File file = new File(imageFolder, c.getId() + ".jpg");
         if (!file.getParentFile().exists()) {
             file.getParentFile().mkdirs();

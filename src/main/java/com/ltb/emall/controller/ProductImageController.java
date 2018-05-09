@@ -37,27 +37,25 @@ public class ProductImageController {
     ProductImageService productImageService;
 
     @RequestMapping("admin_productImage_add")
-    public String add(ProductImage pi, HttpSession session, UploadedImageFile uploadedImageFile) {
-        /**
-         * @author litengbin
-         * @method add
-         * @param       [pi, session, uploadedImageFile]
-         * @return java.lang.String
-         * @date 2018/2/18 14:43
-         * @version 1.0.0
-         * @description 新增产品图片
-         */
+    public String add(ProductImage pi,
+                      HttpSession session,
+                      UploadedImageFile uploadedImageFile) {
         productImageService.add(pi);
         String fileName = pi.getId() + ".jpg";
         String imageFolder;
         String imageFolder_small = null;
         String imageFolder_middle = null;
-        if (ProductImageService.imageType_single.equals(pi.getImageType())) {
-            imageFolder = session.getServletContext().getRealPath("img/productSingle");
-            imageFolder_small = session.getServletContext().getRealPath("img/productSingle_small");
-            imageFolder_middle = session.getServletContext().getRealPath("img/productSingle_middle");
+        if (ProductImageService.
+                imageType_single.equals(pi.getImageType())) {
+            imageFolder = session.getServletContext().
+                    getRealPath("img/productSingle");
+            imageFolder_small = session.getServletContext().
+                    getRealPath("img/productSingle_small");
+            imageFolder_middle = session.getServletContext().
+                    getRealPath("img/productSingle_middle");
         } else {
-            imageFolder = session.getServletContext().getRealPath("img/productDetail");
+            imageFolder = session.getServletContext().
+                    getRealPath("img/productDetail");
         }
         File f = new File(imageFolder, fileName);
         if (!f.getParentFile().exists()) {
@@ -67,7 +65,8 @@ public class ProductImageController {
             uploadedImageFile.getImage().transferTo(f);
             BufferedImage img = ImageUtil.change2jpg(f);
             ImageIO.write(img, "jpg", f);
-            if (ProductImageService.imageType_single.equals(pi.getImageType())) {
+            if (ProductImageService.imageType_single.
+                    equals(pi.getImageType())) {
                 File f_small = new File(imageFolder_small, fileName);
                 File f_middle = new File(imageFolder_middle, fileName);
                 ImageUtil.resizeImage(f, 56, 56, f_small);
@@ -163,24 +162,18 @@ public class ProductImageController {
 
     @RequestMapping("admin_productImage_delete")
     public String delete(int id, HttpSession session) {
-        /**
-         * @author litengbin
-         * @method delete
-         * @param       [id, session]
-         * @return java.lang.String
-         * @date 2018/2/18 14:43
-         * @version 1.0.0
-         * @description 删除产品图片
-         */
         ProductImage pi = productImageService.get(id);
         String fileName = pi.getId() + ".jpg";
         String imageFolder;
         String imageFolder_small = null;
         String imageFolder_middle = null;
         if (ProductImageService.imageType_single.equals(pi.getImageType())) {
-            imageFolder = session.getServletContext().getRealPath("img/productSingle");
-            imageFolder_small = session.getServletContext().getRealPath("img/productSingle_small");
-            imageFolder_middle = session.getServletContext().getRealPath("img/productSingle_middle");
+            imageFolder = session.getServletContext().
+                    getRealPath("img/productSingle");
+            imageFolder_small = session.getServletContext().
+                    getRealPath("img/productSingle_small");
+            imageFolder_middle = session.getServletContext().
+                    getRealPath("img/productSingle_middle");
             File imageFile = new File(imageFolder, fileName);
             File f_small = new File(imageFolder_small, fileName);
             File f_middle = new File(imageFolder_middle, fileName);
@@ -188,7 +181,8 @@ public class ProductImageController {
             f_small.delete();
             f_middle.delete();
         } else {
-            imageFolder = session.getServletContext().getRealPath("img/productDetail");
+            imageFolder = session.getServletContext().
+                    getRealPath("img/productDetail");
             File imageFile = new File(imageFolder, fileName);
             imageFile.delete();
         }

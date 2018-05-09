@@ -93,16 +93,9 @@ public class ForeController {
     }
 
     @RequestMapping("forelogin")
-    public String login(@RequestParam("name") String name, @RequestParam("password") String password, Model model, HttpSession session) {
-        /**
-         * @author litengbin
-         * @method login
-         * @param       [name, password, model, session]
-         * @return java.lang.String
-         * @date 2018/2/19 19:35
-         * @version 1.0.0
-         * @description 登录
-         */
+    public String login(@RequestParam("name") String name,
+                        @RequestParam("password") String password,
+                        Model model, HttpSession session) {
         name = HtmlUtils.htmlEscape(name);
         User user = userService.get(name, password);
         if (null == user) {
@@ -206,7 +199,6 @@ public class ForeController {
         Category c = categoryService.get(cid);
         productService.fill(c);
         productService.setSaleAndReviewNumber(c.getProducts());
-
         if (null != sort) {
             switch (sort) {
                 case "review":

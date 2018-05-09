@@ -30,15 +30,6 @@ public class PropertyValueController {
 
     @RequestMapping("admin_propertyValue_edit")
     public String edit(Model model, int pid) {
-        /**
-         * @author litengbin
-         * @method edit
-         * @param       [model, pid]
-         * @return java.lang.String
-         * @date 2018/2/18 14:42
-         * @version 1.0.0
-         * @description 编辑属性值
-         */
         Product product = productService.get(pid);
         propertyValueService.init(product);
         List<PropertyValue> pvs = propertyValueService.list(pid);
