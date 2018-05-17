@@ -33,4 +33,6 @@ public interface OrderService {
     public float add(Order o, List<OrderItem> ois);
 
     public List list(int uid, String excludedStatus);
+
+    Order get(String code);
 }

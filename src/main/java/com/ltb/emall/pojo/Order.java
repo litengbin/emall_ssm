@@ -189,13 +189,13 @@ public class Order {
                 desc = "待收货";
                 break;
             case OrderService.waitReview:
-                desc = "等评价";
+                desc = "待评价";
                 break;
             case OrderService.finish:
-                desc = "完成";
+                desc = "已完成";
                 break;
             case OrderService.delete:
-                desc = "刪除";
+                desc = "已刪除";
                 break;
             default:
                 desc = "未知";

@@ -67,7 +67,7 @@
                 },
                     elementError:"label",
                     success:function (label) {
-                        label.html("<span class = 'green1 glyphicon glyphicon-ok'>正确</span>");
+                        label.html("<span class = 'green1 glyphicon glyphicon-ok' style='color:green'>正确</span>");
                     },
 //                    errorClass:"error glyphicon glyphicon-remove",
         });

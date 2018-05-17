@@ -35,6 +35,13 @@ public class OrderServiceImpl implements OrderService {
     OrderItemService orderItemService;
 
     @Override
+    public Order get(String code){
+        OrderExample example = new OrderExample();
+        example.createCriteria().andOrderCodeEqualTo(code);
+        return orderMapper.selectByExample(example).get(0);
+    }
+
+    @Override
     public void add(Order order) {
         /**
          * @author litengbin

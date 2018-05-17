@@ -1,4 +1,4 @@
-<%--
+<%@ page import="org.apache.commons.lang.math.RandomUtils" %><%--
   Created by IntelliJ IDEA.
   User: litengbin
   Date: 2018/2/24
@@ -24,9 +24,9 @@
         <ul>
             <li>收货地址：${o.address} ${o.receiver} ${o.mobile }</li>
             <li>实付款：<span class="payedInfoPrice">
-            ￥<fmt:formatNumber type="number" value="${param.total}" minFractionDigits="2"/>
+            ￥<fmt:formatNumber type="number" value="${total}" minFractionDigits="2"/>
             </li>
-            <li>预计2月28日送达</li>
+            <li>预计5月<%=RandomUtils.nextInt(7)+24%>日送达</li>
         </ul>
         <div class="paedCheckLinkDiv">
             您可以

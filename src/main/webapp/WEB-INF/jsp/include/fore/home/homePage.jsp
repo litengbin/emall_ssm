@@ -1,4 +1,4 @@
-<%--
+<%@ page import="org.apache.commons.lang.math.RandomUtils" %><%--
   Created by IntelliJ IDEA.
   User: litengbin
   Date: 2018/2/19
@@ -13,10 +13,13 @@
          onmouseover="clearInterval(interval)"
          onmouseout="interval = setInterval('changePos()', delay)"
          align="right">
-        <a href="#" target="_blank">
-            <img width="100px" height="100px;" src="img/lunbo/6.jpg"
-                 onclick="javascript:window.open(this.src);"
-                 style="CURSOR: pointer" onload="return imgzoom(this,550)">
+        <%--<a href="#" target="_blank">--%>
+            <a href="foreproduct?pid=<%=RandomUtils.nextInt(340)+1%>">
+            <%--<img width="100px" height="100px;" src="img/lunbo/6.jpg"--%>
+                 <%--onclick="javascript:window.open(this.src);"--%>
+                 <%--style="CURSOR: pointer" onload="return imgzoom(this,550)">--%>
+                <img width="100px" height="100px;" src="img/lunbo/6.jpg"
+                     style="CURSOR: pointer">
         </a>
         <span style="CURSOR:hand;color:red;font-weight:bold;margin-top: 0px;"
               onclick="clearInterval(interval);img.style.visibility = 'hidden'">X</span>

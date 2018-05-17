@@ -11,7 +11,7 @@
     <div class="modal-dialog loginDivInProductPageModalDiv">
         <div class="modal-content">
             <div class="loginDivInProductPage">
-                <div class="loginErrorMessageDiv">
+                <div class="loginErrorMessageDiv" style="width: 100%;">
                     <div class="alert alert-info">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
                         <span class="errorMessage"></span>

@@ -97,17 +97,17 @@
                     </tr>
                     <tr>
                         <td>原价格</td>
-                        <td><input id="initialPrice" value="99.98" name="initialPrice" type="text"
+                        <td><input id="initialPrice" name="initialPrice" type="text"
                                    class="form-control"></td>
                     </tr>
                     <tr>
                         <td>优惠价格</td>
-                        <td><input id="promotePrice" value="19.98" name="promotePrice" type="text" class="form-control">
+                        <td><input id="promotePrice" name="promotePrice" type="text" class="form-control">
                         </td>
                     </tr>
                     <tr>
                         <td>库存</td>
-                        <td><input id="inventory" value="99" name="inventory" type="text" class="form-control"></td>
+                        <td><input id="inventory" name="inventory" type="text" class="form-control"></td>
                     </tr>
                     <tr class="submitTR">
                         <td colspan="2" align="center">

@@ -195,11 +195,11 @@ div.categoryWithCarousel div.eachCategory span {
 
 div.categoryWithCarousel div.eachCategory {
     /* 	height:30px; */
-    line-height: 30px;
+    line-height: 29.5px;
     padding-left: 10px;
     /* 	border:1px dashed lightgray; */
     font-size: 16px;
-    /* 	background-image:url(../../img/site/eachcategory.png); */
+    
     /* 	background-repeat: no-repeat; */
 }
 
@@ -520,11 +520,11 @@ div.loginSmallDiv {
 }
 
 div.loginErrorMessageDiv {
-    width: 87%;
-    position: absolute;
-    top: 20px;
-    display: none;
-}
+     width: 87%;
+     position: absolute;
+     top: 20px;
+     display: none;
+ }
 
 div.loginErrorMessageDiv div.alert {
     padding: 5px !important;
@@ -1380,7 +1380,7 @@ div.orderItemSumDiv {
 }
 
 textarea.leaveMessageTextarea {
-    border: 1px solid #FFAD35;
+    border: 1px solid #AFAFAF;
     width: 250px;
     height: 60px;
     resize: none;

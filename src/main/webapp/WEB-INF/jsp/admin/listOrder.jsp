@@ -45,7 +45,7 @@
                     <td width="4%">${o.id}</td>
                     <td width="7%">
                         <c:if test="${o.status=='finish'}">
-                        <span class="label label-success">已${o.statusDesc}</span>
+                        <span class="label label-success">${o.statusDesc}</span>
                     </c:if>
                         <c:if test="${o.status=='waitPay'}">
                             <span class="label label-default">${o.statusDesc}</span>
@@ -60,7 +60,7 @@
                             <span class="label label-info">${o.statusDesc}</span>
                         </c:if>
                         <c:if test="${o.status=='delete'}">
-                            <span class="label label-danger">已${o.statusDesc}</span>
+                            <span class="label label-danger">${o.statusDesc}</span>
                         </c:if>
 
 

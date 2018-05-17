@@ -14,6 +14,7 @@ import com.swetake.util.Qrcode;
 import jp.sourceforge.qrcode.QRCodeDecoder;
 import jp.sourceforge.qrcode.data.QRCodeImage;
 import jp.sourceforge.qrcode.exception.DecodingFailedException;
+import org.junit.Test;
 
 /**
  * ClassName: QRCodeUtil
@@ -107,13 +108,13 @@ public class QRCodeUtil {
             return image.getRGB(x, y);
         }
     }
-
+    @Test
     public static void main(String[] args) {
         String filePath = "e:/qrcode.png";
         File qrFile = new File(filePath);
 
         // 二维码内容
-        String encodeddata = "http://112.74.32.142:8080/emall_ssm";
+        String encodeddata = "http://112.74.32.142/adminloginPage";
         try {
             QRCodeUtil.qrCodeEncode(encodeddata, qrFile);
         } catch (IOException e) {
