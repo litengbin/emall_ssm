@@ -208,15 +208,12 @@ public class ForeController {
                 case "date":
                     Collections.sort(c.getProducts(), new ProductDateComparator());
                     break;
-
                 case "saleCount":
                     Collections.sort(c.getProducts(), new ProductSaleCountComparator());
                     break;
-
                 case "price":
                     Collections.sort(c.getProducts(), new ProductPriceComparator());
                     break;
-
                 case "all":
                     Collections.sort(c.getProducts(), new ProductAllComparator());
                     break;
